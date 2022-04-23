@@ -44,7 +44,7 @@ jobs:
           images: vikasagarwal84/node-dotnet-sdk
           tags: |
               type=ref,event=branch,value={{node_version}}
-              type=sha,prefix=$node_version-
+              type=sha,prefix=${{ env.node_version }}-
               type=raw,value=latest
 
       - name: Build and push Docker image
