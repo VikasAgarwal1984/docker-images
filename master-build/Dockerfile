@@ -1,4 +1,5 @@
-FROM node:16.14.2
+ARG node_version=16.14.0
+FROM node:${node_version}
 
 RUN apt-get update; \
    apt-get install -y wget
